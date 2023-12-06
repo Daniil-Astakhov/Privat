@@ -23,23 +23,23 @@ const DesktopHeader = (): JSX.Element => {
 	const { t } = useTranslation();
 
 	const desktopHeaderElements = [
-		{ name: `${t("Rating.lectures")}`, to: "/lectures" },
-		{ name: `${t("Rating.tests")}`, to: "/tests" },
-		{ name: `${t("Rating.rating")}`, to: "/rating" },
+		{ name: `${t("Rating.lectures")}`, to: "/root/lectures" },
+		{ name: `${t("Rating.tests")}`, to: "/root/tests" },
+		{ name: `${t("Rating.rating")}`, to: "/root/rating" },
 	];
 
 	const initials = `${!name ? "Пользователь" : name} ${
 		!lastname ? "П" : lastname.slice(0, 1)
 	}.`;
 	const arr = [
-		<Link className="flex w-full h-full" href="/profile" key="profile">
+		<Link className="flex w-full h-full" href="/root/profile" key="profile">
 			{t("Main.profile")}
 		</Link>,
 		<div
 			key="login"
 			onClick={() => {
 				dispatch(fetchLogout());
-				router.push("/login");
+				router.push("/root/auth/login");
 			}}
 		>
 			{t("Main.logout")}

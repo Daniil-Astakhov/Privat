@@ -160,7 +160,7 @@ export const LoginAppPage = (): JSX.Element => {
 							className="text-[#71717A] text-base bg-none hover:bg-[#fff0] hover:text-[#52525B] active:text-[#52525B] disabled:text-disabledColor mt-[5px]"
 							variant="light"
 							type="button"
-							onClick={() => router.push("/registration")}
+							onClick={() => router.push("/root/auth/registration")}
 						>
 							{t("Table.Columns.registration")}
 						</Button>

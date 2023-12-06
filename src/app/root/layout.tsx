@@ -14,7 +14,8 @@ export default function ChildRootLayout({
 	children: React.ReactNode;
 }): JSX.Element {
 	const pathname = usePathname();
-	const visible = pathname === "/registration" || pathname === "/login";
+	const visible =
+		pathname === "/root/auth/registration" || pathname === "/root/auth/login";
 
 	return (
 		<motion.section

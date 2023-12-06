@@ -39,10 +39,10 @@ const Header = (): JSX.Element => {
 	return (
 		<>
 			{!isSizeNull && width >= 1024 && <DesktopHeader />}
-			{!isSizeNull && width < 1024 && pathname === "/profile" && (
+			{!isSizeNull && width < 1024 && pathname === "/root/profile" && (
 				<MobileProfileHeader />
 			)}
-			{!isSizeNull && width < 1024 && pathname !== "/profile" && (
+			{!isSizeNull && width < 1024 && pathname !== "/root/profile" && (
 				<MobilePageHeader />
 			)}
 		</>

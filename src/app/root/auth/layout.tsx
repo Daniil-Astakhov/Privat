@@ -16,7 +16,7 @@ export default function AuthLayout({
 	const size = useWindowSize();
 	const pathName = usePathname();
 
-	const registrationPathName = "/registration";
+	const registrationPathName = "/root/auth/registration";
 
 	const isSizeNull = size?.width === null;
 	return (
