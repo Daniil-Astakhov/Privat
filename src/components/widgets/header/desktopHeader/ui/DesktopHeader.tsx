@@ -23,9 +23,9 @@ const DesktopHeader = (): JSX.Element => {
 	const { t } = useTranslation();
 
 	const desktopHeaderElements = [
-		{ name: `${t("Rating.lectures")}`, to: "/root/lectures" },
-		{ name: `${t("Rating.tests")}`, to: "/root/tests" },
-		{ name: `${t("Rating.rating")}`, to: "/root/rating" },
+		{ name: `${t("Rating.lectures")}`, to: "lectures" },
+		{ name: `${t("Rating.tests")}`, to: "tests" },
+		{ name: `${t("Rating.rating")}`, to: "rating" },
 	];
 
 	const initials = `${!name ? "Пользователь" : name} ${
@@ -51,18 +51,15 @@ const DesktopHeader = (): JSX.Element => {
 			<Image src="/academy_mini_logo.svg" alt="a" width={43} height={43} />
 			<nav className={styles.headerNav}>
 				{desktopHeaderElements.map((element, index) => (
-					<span
+					<Link
 						className={`${styles.link} ${
 							pathname === element.to && styles.activeLink
 						}`}
 						key={index}
-						onClick={(e) => {
-							e.preventDefault();
-							router.push(element.to);
-						}}
+						href={element.to}
 					>
 						{element.name}
-					</span>
+					</Link>
 				))}
 			</nav>
 			<Dropdown radius="lg">
