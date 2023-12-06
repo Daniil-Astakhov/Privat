@@ -48,7 +48,7 @@ export const LoginAppPage = (): JSX.Element => {
 					dispatch(fetchProfile()).then((profileResponse: any) => {
 						if (profileResponse.meta.requestStatus === "fulfilled") {
 							dispatch(fetchMyAnalytic());
-							router.push("/root/auth/profile");
+							router.push("/root/profile");
 						}
 					});
 				}
