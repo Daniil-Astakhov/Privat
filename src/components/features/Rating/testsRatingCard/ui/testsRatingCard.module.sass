@@ -1,0 +1,47 @@
+.cardWrapper
+	@apply flex flex-col items-center p-10 minMobile:w-[358px] minTablet:w-[505px] maxTablet:p-5 maxPc:p-[30px] pb-[20px]
+
+.cardHeader
+	@apply flex justify-center text-[24px] font-[450] pt-0 text-center
+
+.cardBody, .cardBody > *
+	@apply flex justify-center p-0
+
+.title
+	@apply text-[18px] mb-[10px]
+
+.count
+	@apply text-[40px] font-semibold mb-5
+
+.progress
+	@apply mb-[10px]
+
+.asterisk
+	@apply text-pinkColor mr-[5px]
+
+.description
+	@apply text-sm
+
+.red
+	@apply bg-red-400 bg-gradient-to-r from-[#f871b2] to-[#f31260] text-transparent bg-clip-text
+
+.yellow
+	@apply bg-red-400 bg-gradient-to-r from-[#ffb864] to-[#ff845e] text-transparent bg-clip-text
+
+.green
+	@apply bg-red-400 bg-gradient-to-r from-[#4ADE80] to-[#06B6D4] text-transparent bg-clip-text
+
+.black
+	@apply text-blackColor
+
+.redProgress
+	@apply bg-pinkColor
+
+.yellowProgress
+	@apply bg-yellowColor
+
+.greenProgress
+	@apply bg-greenColor
+
+.blackProgress
+	@apply bg-blackColor

@@ -1,0 +1,8 @@
+/.next
+/.idea
+/.gitignore
+/.editorconfig
+.git
+/README.md
+/rsync-ignore.txt
+/.gitlab-ci.yml

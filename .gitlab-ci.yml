@@ -1,0 +1,33 @@
+stages:
+  - production
+
+.stage_ssh: &stage_ssh |
+  mkdir -p ~/.ssh
+  echo "$SERVER_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+  chown 600 ~/.ssh/id_rsa
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_rsa
+  eval ssh-keyscan -H '$SERVER_IP' >> ~/.ssh/known_hosts
+
+production-job:
+  only:
+    - master
+  stage: production
+  image: alpine:latest
+  before_script:
+    - if [ -z ${PROJECT_PATH+x} ]; then echo "PROJECT_PATH is unset"; exit 1; fi
+    - export PM2="sudo /www/server/nvm/versions/node/v18.18.2/bin/pm2"
+    - export NPM="sudo /www/server/nvm/versions/node/v18.18.2/bin/npm"
+    - echo $PROJECT_PATH
+    - apk update && apk add openssh-client rsync
+    - *stage_ssh
+  script:
+    - echo "Deploying application..."
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $PM2 stop $CI_PROJECT_NAME --silent || true"
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $PM2 delete $CI_PROJECT_NAME --silent || true"
+    - rsync --rsync-path 'sudo rsync' --chown=www:www --chmod=D0755,F0644 -atv --delete --exclude-from 'rsync-ignore.txt' ./ $SERVER_USER@$SERVER_IP:$PROJECT_PATH
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $NPM i"
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $NPM run build"
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $PM2 start \"npm run start\" --name $CI_PROJECT_NAME"
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && sudo chown www:www -R $PROJECT_PATH"
+    - ssh $SERVER_USER@$SERVER_IP "cd $PROJECT_PATH && $PM2 save"

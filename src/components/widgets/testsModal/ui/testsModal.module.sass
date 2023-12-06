@@ -1,0 +1,32 @@
+.wrapper
+	@apply z-[500] overflow-hidden maxPc:rounded-none
+
+.backdrop
+	@apply bg-[#292f46]/50 backdrop-opacity-40 z-[200]
+
+.base
+	@apply border-white bg-white max-h-[100vh] text-[#a8b0d3] min-w-[100vw] w-screen mx-0 z-[1000] maxPc:h-screen minPc:min-w-[1024px]  maxPc:rounded-none
+
+.header
+	@apply  font-[400] text-[16px] text-[#171717] leading-6 py-2 pl-10 h-[50px] flex justify-center items-center maxPc:uppercase maxPc:border-b-1 maxPc:shadow-lichiShadow minPc:items-start minPc:mb-5 minPc:mt-8 minPc:px-10 minPc:pr-20
+
+.body
+	@apply text-sm px-4 pt-[30px] w-full overflow-y-scroll bg-white minPc:px-10
+
+.footer
+	@apply px-5 py-3 mb-12 mt-[50px] minTablet:mt-[90px] minTablet:mb-[164px] maxPc:flex maxPc:justify-center minPc:mt-[50px] minPc:py-0 minPc:mb-10 minPc:px-10
+
+.a
+	@apply z-[100] maxPc:rounded-none
+
+.closeButton
+	@apply top-1 hover:bg-white/5 active:bg-white/10 maxPc:left-1 minPc:right-5 minPc:top-9
+
+.closeButton *
+	@apply w-6 h-6
+
+.applyBtn
+	@apply w-fit mb-10 maxPc:mx-auto minPc:ml-auto
+
+.topHeaderBlock
+	@apply  w-full flex justify-between

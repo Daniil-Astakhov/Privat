@@ -1,0 +1,30 @@
+.collapseWrapper
+	@apply flex flex-col w-full border-1 border-white drop-shadow-md rounded-md
+
+.collapseHeader
+	@apply flex px-6 py-4 justify-between w-full hover:cursor-pointer
+
+.collapseHeader h2
+	@apply text-[#3F3F46]
+
+.element
+	@apply flex border-b-1 border-b-[#DBDBDB] px-[25px] shadow-none last:border-0 hover:cursor-pointer
+
+.option
+	@apply flex flex-wrap w-4/5 hover:cursor-pointer
+
+.option *
+	@apply break-words font-light w-full py-5 text-blackColor
+
+.endContent
+	@apply w-1/5 flex items-center justify-end
+// hover:last:w-12
+
+.rotatedArrow
+	@apply -rotate-90 transition-all
+
+.warningWrapper
+	@apply flex gap-[5px]
+
+// .endContent:hover:last-child *
+// 	@apply w-12

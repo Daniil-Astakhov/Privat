@@ -1,0 +1,19 @@
+@import "../../../../shared/styles/vars"
+
+.button
+	@apply relative px-4 py-2 text-base rounded-xl w-full h-full flex justify-center items-center
+
+.black
+	@apply text-white bg-black hover:bg-pinkColor transition  disabled:bg-disabledColor
+
+.whiteBlack
+	@apply text-black bg-white border-2 border-black border-solid transition hover:bg-pinkColor hover:text-white hover:border-pinkColor  disabled:bg-disabledColor
+
+.whiteGrey
+	@apply text-black bg-white border-2 border-[#E4E4E7] hover:border-[#000000] border-solid hover:text-white hover:bg-[#000000] transition
+
+.borderless
+	@apply text-[#71717A] bg-white hover:text-[#52525B] active:text-[#52525B] disabled:text-disabledColor
+
+.languageBtn
+	@apply bg-red-400

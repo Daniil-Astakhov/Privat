@@ -1,0 +1,26 @@
+@keyframes drawerOpen
+	0%
+		@apply -right-2/4
+	100%
+		@apply right-0
+
+.wrapper
+	@apply w-screen h-screen fixed top-0 right-0 flex z-[110]
+
+.mask
+	@apply w-screen h-full bg-gray-800 opacity-50 relative hover:cursor-pointer maxTablet:hidden
+
+.closeBtn
+	@apply text-3xl flex items-start p-2
+
+.drawer
+	@apply w-2/4 h-full bg-white maxTablet:w-screen
+
+.divider
+	@apply w-full h-0.5 bg-gray-200
+
+.drawerHeader
+	@apply flex items-center justify-between py-4 px-6 text-xxl font-bold
+
+.drawerBody
+	@apply w-full h-full

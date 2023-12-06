@@ -1,0 +1,35 @@
+.form
+  @apply flex w-full h-full maxPc:flex-col maxPc:items-center maxPc:justify-start
+
+.title
+  @apply  flex items-center justify-center font-[450] minMobile:my-10 minTablet:mb-[60px] minTablet:mt-[80px] maxPc:w-[100%] maxPc:text-[20px] maxPc:leading-6 maxPc:text-center minPc:text-left minPc:leading-10 minPc:text-[40px]  minPc:my-0
+
+.questions
+  @apply flex gap-1 bg-[#F4F4F5] w-fit rounded-xl
+
+.questions > div
+  // @apply bg-[#F4F4F5]
+
+.listQuestions
+  @apply flex flex-col
+
+.groupWrapper
+  @apply flex flex-col mb-8 maxPc:w-full minPc:w-1/2
+
+.group
+  @apply w-full mb-[60px]
+
+.group > div
+  @apply flex flex-col items-start gap-[30px]
+
+.choice
+  @apply w-full
+
+.buttonWrapper
+  @apply w-full flex justify-end maxPc:justify-center
+
+.titleArabic
+  @apply text-right
+
+.optionTitle
+  @apply mb-10 text-[18px] maxPc:text-center

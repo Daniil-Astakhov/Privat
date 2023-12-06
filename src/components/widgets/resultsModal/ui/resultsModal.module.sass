@@ -1,0 +1,107 @@
+.modalWrapper
+	@apply flex maxPc:flex-col maxPc:items-center
+
+.wrapper
+	@apply z-[110] overflow-hidden maxPc:rounded-none
+
+.testsWrapper
+	@apply minPc:max-h-[400px] minPc:overflow-y-scroll
+
+.backdrop
+	@apply bg-[#292f46]/50 backdrop-opacity-40 z-[100] maxPc:hidden
+
+.base
+	@apply border-white bg-white text-[#a8b0d3] min-w-[100vw] w-screen mx-0 z-[1000] maxPc:h-screen maxPc:rounded-none minPc:min-w-[1024px] minPc:h-[80vh]
+
+.header
+	@apply font-[400] text-[16px] text-[#171717] leading-6 py-2 pl-10 h-[50px] flex justify-center items-center maxPc:uppercase maxPc:border-b-1 maxPc:shadow-lichiShadow minPc:items-start minPc:mb-5 minPc:mt-8 minPc:px-10 minPc:pr-20
+
+.body
+	@apply text-sm px-4 pt-[30px] w-full overflow-y-scroll bg-white maxPc:mb-[105px] minPc:px-10
+
+.footer
+	@apply px-5 py-3 mb-12 mt-[50px] minTablet:mt-[90px] minTablet:mb-[164px] maxPc:flex maxPc:justify-center minPc:mt-[50px] minPc:py-0 minPc:mb-10 minPc:px-10
+
+.closeButton
+	@apply top-1 hover:bg-white/5 active:bg-white/10 maxPc:left-1 minPc:right-5 minPc:top-9
+
+.closeButton *
+	@apply w-6 h-6
+
+.resultWrapper
+	@apply flex flex-col items-center
+
+.textWrapper
+	@apply flex flex-col items-center gap-1 mb-[14px]
+
+.congratulations, .passed
+	@apply text-[18px] text-blackColor
+
+.percent
+	@apply text-[40px] font-semibold text-greenColor mb-5 leading-[56px]
+
+.descriptionWrapper
+	@apply flex gap-[6px]
+
+.asterisk
+	@apply text-darkPinkColor
+
+.description
+	@apply text-[14px]
+
+.testsHeader
+	@apply text-[24px] font-[450] maxPc:flex maxPc:justify-center
+
+.listHeading
+	@apply text-[14px] text-[#171717B2]
+
+.listWrapper
+	@apply mb-10
+
+.list
+	@apply flex flex-col items-center gap-5 mt-5
+
+.quiz
+	@apply w-full flex items-center justify-between text-[16px] p-4 border-1 border-[#00000033] rounded-lg cursor-pointer
+
+.rating
+	@apply text-[24px] font-[450] text-blackColor mb-[25px]
+
+.resultBase, .testsBase
+	@apply minMobile:px-4 minTablet:px-[108px] minPc:px-0 maxPc:w-full minPc:w-1/2
+
+.svg
+	@apply w-[170px] h-[170px]
+
+.indicator
+	@apply w-[170px] h-[170px]
+
+.track
+	@apply w-[170px] h-[170px]
+
+.value
+	@apply flex text-[23px] font-semibold
+
+.red
+	@apply bg-red-400 bg-gradient-to-r from-[#f871b2] to-[#f31260] text-transparent bg-clip-text
+
+.yellow
+	@apply bg-red-400 bg-gradient-to-r from-[#ffb864] to-[#ff845e] text-transparent bg-clip-text
+
+.green
+	@apply bg-red-400 bg-gradient-to-r from-[#4ADE80] to-[#06B6D4] text-transparent bg-clip-text
+
+.black
+	@apply text-blackColor
+
+.redProgress
+	@apply stroke-pinkColor
+
+.yellowProgress
+	@apply stroke-yellowColor
+
+.greenProgress
+	@apply stroke-greenColor
+
+.blackProgress
+	@apply stroke-blackColor

@@ -1,0 +1,56 @@
+.wrapper
+	@apply flex justify-between h-full
+
+.resultWrapper
+	@apply w-full flex flex-col items-center
+
+.questions
+	@apply w-full flex flex-col gap-[30px] minPc:max-h-[450px]  maxPc:h-full overflow-y-scroll overflow-x-hidden
+
+.question
+	@apply pb-[30px] border-b-1 border-[#DBDBDB] flex flex-col gap-5
+
+.titleWrapper
+	@apply flex gap-[7px]
+
+.titleNumber
+	@apply text-[18px]
+
+.title
+	@apply text-[20px] font-[450]
+
+.result
+	@apply flex flex-col gap-5 mb-[30px]
+
+.result > *
+	@apply text-center
+
+.percent
+	@apply text-[40px] font-semibold leading-[56px]
+
+.corrects
+	@apply text-[20px] font-light
+
+.passed
+	@apply text-[24px] font-[450]
+
+.optionHeading
+	@apply text-[18px] font-[450]
+
+.crutch
+	@apply overflow-y-hidden
+
+.yourResult
+	@apply text-center text-[24px] font-[450] mb-[50px]
+
+.red
+	@apply bg-red-400 bg-gradient-to-r from-[#f871b2] to-[#f31260] text-transparent bg-clip-text
+
+.yellow
+	@apply bg-orange-400 bg-gradient-to-r from-[#ffb864] to-[#ff845e] text-transparent bg-clip-text
+
+.green
+	@apply bg-green-400 bg-gradient-to-r from-[#4ADE80] to-[#06B6D4] text-transparent bg-clip-text
+
+.black
+	@apply text-blackColor

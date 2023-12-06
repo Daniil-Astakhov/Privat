@@ -1,0 +1,74 @@
+.card
+	@apply p-10 mt-5 mb-5 minMobile:w-[358px] minTablet:w-[505px] minPc:w-[1030px] maxPc:p-[30px] maxPc:mb-[20px] maxTablet:p-5
+
+.header, .body, .card
+	@apply flex justify-center
+
+.body, .footer
+	@apply p-0
+
+.header
+	@apply pt-0
+
+.rating
+	@apply text-[24px] font-[450]
+
+.svg
+	@apply w-[170px] h-[170px]
+
+.indicator
+	@apply w-[170px] h-[170px]
+
+.track
+	@apply w-[170px] h-[170px]
+
+.value
+	@apply flex text-[23px] font-semibold
+
+.progressWrapper
+	@apply flex justify-center items-center maxPc:flex-col
+
+.descriptionWrapper
+	@apply flex mt-[30px]
+
+.asterisk
+	@apply text-pinkColor mr-[5px]
+
+.description
+	@apply text-[14px]
+
+.percentWrapper
+	@apply ml-[60px] maxPc:ml-0
+
+.congratulations
+	@apply text-[18px] font-normal maxPc:text-center
+
+.percent
+	@apply font-semibold text-[40px] maxPc:text-center
+
+.red
+	@apply bg-red-400 bg-gradient-to-r from-[#f871b2] to-[#f31260] text-transparent bg-clip-text
+
+.yellow
+	@apply bg-orange-400 bg-gradient-to-r from-[#ffb864] to-[#ff845e] text-transparent bg-clip-text
+
+.green
+	@apply bg-green-400 bg-gradient-to-r from-[#4ADE80] to-[#06B6D4] text-transparent bg-clip-text
+
+.black
+	@apply text-blackColor
+
+.redProgress
+	@apply stroke-pinkColor
+
+.yellowProgress
+	@apply stroke-yellowColor
+
+.greenProgress
+	@apply stroke-greenColor
+
+.blackProgress
+	@apply stroke-blackColor
+
+.footer
+	@apply flex justify-end
