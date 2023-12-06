@@ -2,6 +2,7 @@
 	"name": "educenter-next",
 	"version": "0.7.3",
 	"private": true,
+	"homepage": "https://rainbow-stroopwafel-7d8741.netlify.app/",
 	"scripts": {
 		"dev": "next dev --turbo",
 		"build": "next build",
