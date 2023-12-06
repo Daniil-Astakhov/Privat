@@ -56,7 +56,10 @@ const DesktopHeader = (): JSX.Element => {
 							pathname === element.to && styles.activeLink
 						}`}
 						key={index}
-						onClick={() => router.push(element.to)}
+						onClick={(e) => {
+							e.preventDefault();
+							router.push(element.to);
+						}}
 					>
 						{element.name}
 					</span>
