@@ -51,15 +51,15 @@ const DesktopHeader = (): JSX.Element => {
 			<Image src="/academy_mini_logo.svg" alt="a" width={43} height={43} />
 			<nav className={styles.headerNav}>
 				{desktopHeaderElements.map((element, index) => (
-					<Link
+					<span
 						className={`${styles.link} ${
 							pathname === element.to && styles.activeLink
 						}`}
 						key={index}
-						href={element.to}
+						onClick={() => router.push(element.to)}
 					>
 						{element.name}
-					</Link>
+					</span>
 				))}
 			</nav>
 			<Dropdown radius="lg">
